@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecofood</title>
+    <link rel="icon" href="img/limaIco.jpg">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/03a89292db.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+</head>
+<div class="sticky-top">
+    <div class="contenedorSuperior">
+        <div class="barraLogo">
+            <a href=""><img class="logo" src="img/logo2.jpg" alt=""></a>
+        </div>
+        <div class="barraCarrito">
+            <button type="button" id="btnCarrito" class="list-group-item list-group-item-info">
+                Finalizar compra <i class="fas fa-shopping-cart"></i>
+            <span id="contador" class="position-absolute top-20 start-100 translate-middle badge rounded-pill bg-dark">
+                0
+                <span class="visually-hidden">unread messages</span>
+            </span>
+            </button>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="inicio" href="#">EcoFood</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button> 
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a id="frutas" class="nav-link lead" href="#">Frutas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="verduras" class="nav-link lead" href="#">Verduras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="almacen" class="nav-link lead" href="#">Almacen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="enlaceSobreNosotros" class="nav-link lead" href="#seccionSobreNosotros">Sobre Nosotros</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                        <input id="inputBuscadorProducto" class="form-control me-2" href="#" type="text" placeholder="Buscar producto...">
+                        <button id="btnBuscadorProducto" type="button" class="btn btn-outline-dark text-light"><i class='fas fa-search'></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>  
+<body>
+    <div class="d-flex flex-column" id="imgPrincipal">   
+        <img id="imgPr" class="justify-content-center" src="img/bienvenida.gif" alt="">
+    </div>
+    <div id="main" class="row container-fluid">
+        <section class="col-md-12 col-lg-8 margenSection">
+            <div class="container-fluid">
+                <div class=" ">
+                        <div id="detalleProd" class="row row-cols-2 row-cols-md-3 row-cols-lg-4">
+                            <!--DOMitems-->  
+                        </div>
+                </div>
+            </div>
+            <div id="contenedorFormulario">
+                <h1 id="tituloFormulario">Formulario de Contacto</h1>
+                <div id="contenedorDatos">
+                    <form action="" class="row g-3 formulario" id="formulario">
+                        <div class="col-md-4">
+                            <label for="apellido" class="form-label"></label>
+                            <input type="text" class="form-control entradaTexto" name="apellido" id="apellido" minlength="2" maxlength="20" placeholder="Apellido">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="nombre" class="form-label"></label>
+                            <input type="text" class="form-control entradaTexto" name="nombre" id="nombre"  minlength="2" maxlength="20" placeholder="Nombre">  
+                        </div>
+                        <div class="col-md-4">
+                            <label for="correo" class="form-label"></label>
+                            <input type="email" class="form-control" name="correo" id="correo" placeholder="email@email.com">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="direccion" class="form-label"></label>
+                            <input type="text" class="form-control" id="direccion" name="direccion"  minlength="2" maxlength="20" placeholder="Dirección de envío" >
+                        </div>
+                        <div class="col-md-3">
+                            <label for="numeroDireccion" class="form-label"></label>
+                            <input type="text" class="form-control entradaNumero" id="numeroDireccion" name="numeroDireccion" minlength="1" maxlength="5" placeholder="Número">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="telefono" class="form-label"></label>
+                            <input type="text" class="form-control entradaNumero" name="telefono" id="telefono"  minlength="7" maxlength="14" placeholder="Teléfono">
+                        </div>
+                        <div class="col-12">
+                            <div>
+                                <label>
+                                    <input class="formulario__checkbox" type="checkbox" name="visa" id="visa" onclick="checkear(this)"> Visa
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input class="formulario__checkbox" type="checkbox" name="master" id="master" onclick="checkear(this)"> Master
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="numeroTarjeta" class="form-label"></label>
+                            <input type="text" class="form-control entradaNumero" id="numeroTarjeta" name="numeroTarjeta" minlength="16" maxlength="16" placeholder="Ingrese los 16 dígitos de la tarjeta">
+                        </div>
+                        <div class="col-md-5">
+                            <label for="titularTarjeta" class="form-label"></label>
+                            <input type="text" class="form-control entradaTexto" id="titularTarjeta" name="titularTarjeta" minlength="2" maxlength="20" placeholder="Titular de la tarjeta">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="vencimientoTarjeta" class="form-label"></label>
+                            <input type="text" class="form-control entradaNumero" id="vencimientoTarjeta" name="vencimientoTarjeta" minlength="4" maxlength="4" placeholder="Vencimiento (MMAA)">
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="list-group-item list-group-item-info">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <aside id="contenedorCarrito" class="col-sm-12 col-md-12 col-lg-4 margenAside">
+            <h1 class="list-group-item list-group-item-info">Carrito</h1>
+            <div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Unidades</th>
+                        <th scope="col"></th>
+                        <th scope="col">Precio</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody id="detalleCarrito">
+                        <!--DOMitemsCarrito-->
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th scope="col">Total</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th id="totalCompra" scope="col">0</th>
+                            <th scope="col"></th>
+                            <th scope="col"><button id="btnVaciarCarrito" class="list-group-item list-group-item-danger">Vaciar carrito</button></th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                </table>
+            </div>
+        </aside>
+    </div>
+    <div id="seccionSobreNosotros" class="container-fluid bg-light">
+        <div class="row"> 
+            <h1>La importancia de los productos "orgánicos"</h1>
+            <p>El término "orgánico" se refiere a la forma en que se cultivan y procesan los productos agrícolas. 
+                Los alimentos orgánicos se cultivan sin el uso de herbicidas sintéticos, pesticidas y fertilizantes.
+                El ganado orgánico criado para carne, huevos y productos lácteos debe criarse en condiciones de vida 
+                que se adapten a sus comportamientos naturales y debe alimentarse con piensos y forrajes orgánicos. 
+                A los animales no se les administra antibióticos, hormonas de crecimiento ni ningún subproducto animal, con lo cual
+                esto hace que la forma en que se cultivan y crían los alimentos mejoran la salud mental y emocional de las personas.    
+            </p>
+            <h1 id="tituloSobreNosotros">Sobre Nosotros</h1>
+        </div>
+        <div id="personal" class="row">
+            <!--baseDeDatosProductos.json-->
+        </div> 
+        <p id="textoSobreNosotros">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit hic, nihil quam dolore voluptate laboriosam, 
+        reiciendis nemo explicabo error eos veniam? Ad adipisci dolorum, quisquam et impedit deleniti optio harum. Lorem ipsum dolor 
+        sit amet consectetur adipisicing elit. Ipsa voluptate repellendus, velit sit laudantium, natus incidunt placeat fugiat ducimus 
+        dicta vero voluptas culpa? Voluptatibus, cumque officiis. Adipisci ipsa earum rerum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Suscipit hic, nihil quam dolore voluptate laboriosam, reiciendis nemo explicabo error eos veniam? Ad adipisci dolorum, quisquam et impedit 
+        deleniti optio harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptate repellendus, velit sit laudantium, natus incidunt 
+        placeat fugiat ducimus dicta vero voluptas culpa? Voluptatibus, cumque officiis. Adipisci ipsa earum rerum!</p>
+    </div>
+    <footer id="pieDePagina">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-4">
+                <h5>Seguinos en nuestras redes sociales:</h5>
+                    <ul class="row list-unstyled">
+                        <li class="col"><a class="text-muted" href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
+                        <li class="col"><a class="text-muted" href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+                        <li class="col"><a class="text-muted" href="#"><i class="fab fa-facebook-square fa-3x"></i></a></li>
+                    </ul>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col col-lg-4">
+                <form class="row" id="suscripcion">
+                    <h5>Suscribite a nuestras ofertas</h5>
+                    <div class="d-flex w-100 gap-2 needs-validation">
+                        <label for="correo" class="visually-hidden"></label>
+                        <input type="email" id="correo" name="correo" class="form-control" value="" placeholder="Ingrese su email..." required>
+                        <button class="list-group-item list-group-item-info" type="submit">Suscribirme</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: auto;
+}
+
+.barraLogo{
+    width: 50%;
+    height: 60px;
+    float:left;
+}
+
+.logo{
+    height: 60px;
+}
+
+.barraCarrito{
+    height: 70px;
+    margin-left: 60%;
+    padding-top: 13px;
+}
+
+#btnCarrito{
+    margin-bottom: 10px;
+}
+
+.sticky-top{
+    background-color: white;
+}
+
+#main{
+    /* border:5px solid red; */
+    /* width: 96%; */
+    /* margin-left: 5px; */
+    padding-bottom: 60px;
+}
+.margenSection{
+    padding-bottom: 20px;
+}
+
+h1, h2, h3, h5{
+    font-family: 'Caveat', cursive;
+}
+
+.imgItem{
+    border: 1px solid lightgrey;
+    border-radius: 0%;
+    height: 150px;
+}
+
+.card{
+    padding: 20px;
+}
+
+#detalleProd{
+    min-height: 400px;
+}
+
+#tituloCategoria{
+    width: 100%;
+    padding: 10px;
+}
+
+#contenedorCarrito{
+    padding-top: 10px ;
+}
+
+@media only screen and (max-width: 1236px){
+    #contenedorCarrito{
+        width: auto;
+    } 
+}
+
+#tituloCategoria h2:first-letter {
+    text-transform: uppercase;
+}
+
+#tituloCategoria h2:not(first-letter){
+    text-transform: lowercase;
+}
+
+.card-body h4:first-letter {
+    text-transform: uppercase;
+}
+
+.card-body h4:not(first-letter){
+    text-transform: lowercase;
+}
+
+.card h4:first-letter {
+    text-transform: uppercase;
+}
+
+.card h4:not(first-letter){
+    text-transform: lowercase;
+}
+
+tr th:first-letter {
+    text-transform: uppercase;
+}
+
+tr th:not(first-letter){
+    text-transform: lowercase;
+}
+
+#seccionSobreNosotros{
+    padding-top: 10px;
+}
+
+#tituloSobreNosotros{
+    padding-bottom: 50px;
+    padding-top: 10px; 
+}
+
+#textoSobreNosotros{
+    padding-top: 30px;
+}
+
+#pieDePagina{
+    padding: 50px;
+}
+#ecoFoodDerechosReservados{
+    padding: 50px;
+    margin-left: 450px;
+}
+
+#contenedorFormulario{
+    padding: 0px 20px 20px 20px ;
+}
+
+#tituloFormulario{
+    padding-bottom: 10px;
+}
+
+#contenedorDatos{
+    padding: 30px;
+    border:1px solid grey;
+    border-radius: 30px;
+    height: auto;
+}
+

@@ -1,0 +1,46 @@
+{
+    "personal":[
+        {
+        "id": 1, 
+        "imagen":"img/tamaraMartinez_640.jpg" , 
+        "nombre": "Tamara Martinez", 
+        "puesto": "Gerente de Logística", 
+        "categoria": "personal"
+        },
+        {
+        "id": 2, 
+        "imagen":"img/gonzaloSuprema_640.jpg" , 
+        "nombre": "Gonzalo Suprema", 
+        "puesto": "Gerente de RRHH", 
+        "categoria": "personal"
+        },
+        {
+        "id": 3, 
+        "imagen":"img/santiagoWeiss_640.jpg" , 
+        "nombre": "Santiago Weiss", 
+        "puesto": "Gerente de Administración",  
+        "categoria": "personal"
+        },
+        {
+        "id": 4, 
+        "imagen":"img/sofiaMartinez_640.jpg" , 
+        "nombre": "Sofia Martinez", 
+        "puesto": "Gerente de Producto", 
+        "categoria": "personal"
+        }, 
+        {
+        "id": 5, 
+        "imagen":"img/martaZamora_640.jpg" , 
+        "nombre": "Marta Zamora", 
+        "puesto": "Gerente de Ventas", 
+        "categoria": "personal"
+        },
+        {
+        "id": 6, 
+        "imagen":"img/marioNegri_640.jpg" , 
+        "nombre": "Mario Negri", 
+        "puesto": "Gerente General", 
+        "categoria": "personal"
+        }
+    ]
+}
