@@ -227,11 +227,19 @@ const rutaJson="js/baseDeDatosPersonal.json";
 //Tratamiento boton finalizar compra
 
 $("#btnCarrito").click(function(){
+    if(carrito >= 0){
+        Swal.fire(
+            '',
+            'Debe ingresar al menos un producto',
+            '',
+        )
+        return false
+    }else{
     ocultarTodosLosProductos();
     ocultarImagenPrincipal();
     $("#contenedorFormulario").fadeIn(2000);
     $("#main").show();
-    
+    }
 })
 
 
