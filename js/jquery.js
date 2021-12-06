@@ -282,3 +282,8 @@ $("#btnBuscadorProducto").click(function(){
     })
 
 })
+
+//cierre navbar al seleccionar
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
