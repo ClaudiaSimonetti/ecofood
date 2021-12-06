@@ -230,7 +230,7 @@ $("#btnCarrito").click(function(){
     if(carrito >= 0){
         Swal.fire(
             '',
-            'Debe ingresar al menos un producto',
+            'Debe ingresar al menos un producto al carrito',
             '',
         )
         return false
