@@ -253,3 +253,24 @@ $(".entradaTexto").keypress(function (key) {
 });
 
 
+//efecto scroll top con boton finaliza compra
+
+$("#btnCarrito").click(function(){
+    //al tag html
+    $('html').animate({
+        scrollTop: $("#main").offset().top  
+    })
+
+})
+
+
+//efecto scroll top con lupita para buscar producto
+
+$("#btnBuscadorProducto").click(function(){
+    console.log("click en sobre nosotros");
+    //al tag html
+    $('html').animate({
+        scrollTop: $("#main").offset().top  
+    })
+
+})
